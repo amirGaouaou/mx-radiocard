@@ -1,0 +1,32 @@
+{
+  "name": "radiogroupcard",
+  "widgetName": "RadioGroupCard",
+  "version": "1.0.0",
+  "description": "My widget description",
+  "copyright": "2020 Mendix Technology BV",
+  "author": "Amir Gaouaou",
+  "config": {
+    "widgetPath": "C:\\Users\\Amir.Gaouaou\\Dropbox (Mendix)\\_LocalMachine\\Documents\\Mendix\\FrontEndWorkshop-main/widgets",
+    "projectPath": "C:\\Users\\Amir.Gaouaou\\Dropbox (Mendix)\\_LocalMachine\\Documents\\Mendix\\FrontEndWorkshop-main",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": "3000"
+  },
+  "packagePath": "mendix",
+  "scripts": {
+    "start": "concurrently \"pluggable-widgets-tools start:server --open\" \"npm:dev\"",
+    "dev": "pluggable-widgets-tools start:js",
+    "build": "pluggable-widgets-tools build:js",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:js"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^8.9.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react-radio-buttons": "^1.2.2"
+  }
+}

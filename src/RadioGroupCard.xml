@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="mendix.radiogroupcard.RadioGroupCard" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Radio Group Card</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="cardContents" type="object" isList="true">
+                <caption>My object list</caption>
+                <description/>
+                <properties>
+                    <propertyGroup caption="Object list group">
+                        <property key="content" type="widgets">
+                            <caption>Content</caption>
+                            <description>Content of radio box</description>
+                        </property>
+                        <property key="disabled" type="boolean" defaultValue="false">
+                            <caption>Disabled</caption>
+                            <description>Expression to disable</description>
+                        </property>
+                    </propertyGroup>
+                </properties>
+            </property>
+            <property key="orientation" type="enumeration" defaultValue="vertical">
+                <caption>Orientation</caption>
+                <description>Radiobox orientation</description>
+                <enumerationValues>
+                    <enumerationValue key="vertical">Vertical</enumerationValue>
+                    <enumerationValue key="horizontal">Horizontal</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="icon" type="enumeration" defaultValue="left">
+                <caption>icon</caption>
+                <description>Radio icon location</description>
+                <enumerationValues>
+                    <enumerationValue key="left">left</enumerationValue>
+                    <enumerationValue key="right">right</enumerationValue>
+                    <enumerationValue key="hidden">hidden</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="iconSize" type="integer" defaultValue="12">
+                <caption>Icon size</caption>
+                <description>size of icon, which appears on a side of button</description>
+            </property>
+			<property key="onChange" type="action">
+				<caption>On Change button</caption>
+				<description>My action setting</description>
+			</property>        
+        </propertyGroup>
+    </properties>
+</widget>
