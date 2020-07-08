@@ -16,7 +16,7 @@
     "start": "concurrently \"pluggable-widgets-tools start:server --open\" \"npm:dev\"",
     "dev": "pluggable-widgets-tools start:js",
     "build": "pluggable-widgets-tools build:js",
-    "lint": "pluggable-widgets-tools lint",
+    "lint": "pluggable-widgets-toolps lint",
     "lint:fix": "pluggable-widgets-tools lint:fix",
     "prerelease": "npm run lint",
     "release": "pluggable-widgets-tools release:js"
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "react-radio-buttons": "^1.2.2"
+    "node-sass": "^4.14.1",
+    "react-radio-buttons": "git+ssh://git@github.com/amirGaouaou/react-radio-buttons.git"
   }
 }

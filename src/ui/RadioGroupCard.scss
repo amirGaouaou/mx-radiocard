@@ -1,0 +1,17 @@
+
+
+.radio-group-card {
+    &.hide-border {
+        .radio-button {
+            &:not(.checked) {
+                border: transparent !important;
+            }
+        }
+    }
+    
+    &.hide-border-selected {
+        .radio-button.checked {
+            border: transparent !important;
+        }
+    }
+}

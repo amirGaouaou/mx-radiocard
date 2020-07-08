@@ -19,7 +19,7 @@
                         </property>
                         <property key="disabled" type="boolean" defaultValue="false">
                             <caption>Disabled</caption>
-                            <description>Expression to disable</description>
+                            <description>Boolean to disable</description>
                         </property>
                     </propertyGroup>
                 </properties>
@@ -36,19 +36,88 @@
                 <caption>icon</caption>
                 <description>Radio icon location</description>
                 <enumerationValues>
-                    <enumerationValue key="left">left</enumerationValue>
-                    <enumerationValue key="right">right</enumerationValue>
-                    <enumerationValue key="hidden">hidden</enumerationValue>
+                    <enumerationValue key="left">Left</enumerationValue>
+                    <enumerationValue key="right">Right</enumerationValue>
+                    <enumerationValue key="hidden">Hidden</enumerationValue>
                 </enumerationValues>
             </property>
-            <property key="iconSize" type="integer" defaultValue="12">
-                <caption>Icon size</caption>
-                <description>size of icon, which appears on a side of button</description>
+            <property key="indexSelected" type="attribute" onChange="onIndexChange" required="true">
+                <caption>Selected Item</caption>
+                <description>Index of the selected item </description>
+                <attributeTypes>
+                    <attributeType name="Integer"/>
+                </attributeTypes>
             </property>
-			<property key="onChange" type="action">
-				<caption>On Change button</caption>
-				<description>My action setting</description>
-			</property>        
+            <property key="onIndexChange" type="action">
+				<caption>On Selected Index change</caption>
+				<description>Action after the selected item changes</description>
+			</property>  
+        </propertyGroup>
+        <propertyGroup caption="Icon">
+            <property key="iconSize" type="enumeration" defaultValue="medium">
+                <caption>Icon size</caption>
+                <description>Radio icon size</description>
+                <enumerationValues>
+                    <enumerationValue key="small">Small</enumerationValue>
+                    <enumerationValue key="medium">Medium</enumerationValue>
+                    <enumerationValue key="large">Large</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="iconWidth" type="integer" defaultValue="1">
+                <caption>Icon Border Width</caption>
+                <description>Border width of the icon</description>
+            </property>
+            <property key="iconMarginTop" type="integer" defaultValue="0">
+                <caption>Icon Margin Top</caption>
+                <description>Top margin to add to the icon</description>
+            </property>
+            <property key="iconLocation" type="enumeration" defaultValue="top">
+                <caption>Icon Location</caption>
+                <description>Radio icon location</description>
+                <enumerationValues>
+                    <enumerationValue key="top">Top</enumerationValue>
+                    <enumerationValue key="center">Center</enumerationValue>
+                    <enumerationValue key="Bottom">Bottom</enumerationValue>
+                </enumerationValues>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Style">
+            <property key="defaultColor" type="string" defaultValue="#0E0E0E" required="false">
+                <caption>Root Color</caption>
+                <description>Color when unselected (Hexadecimal string ex: #0E0E0E) </description>
+            </property>
+            <property key="borderWidth" type="string" defaultValue="" required="false">
+                <caption>Border Width</caption>
+                <description> Width of the border of the box </description>
+            </property>            <property key="hideBorder" type="boolean" defaultValue="false">
+                <caption>Hide Border</caption>
+                <description></description>
+            </property>
+            <property key="hideBorderSelected" type="boolean" defaultValue="false">
+                <caption>Hide Border when selected</caption>
+                <description></description>
+            </property>
+            <property key="selectedType" type="enumeration" defaultValue="border">
+                <caption>Selected Color Style</caption>
+                <description>Type of color change when selected</description>
+                <enumerationValues>
+                    <enumerationValue key="border">Border</enumerationValue>
+                    <enumerationValue key="fill">Fill</enumerationValue>
+                    <enumerationValue key="both">Both</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="customSelectedColor" type="string" defaultValue="" required="false">
+                <caption>Selected Color</caption>
+                <description>Color when selected (Hexadecimal string ex: #0E0E0E) </description>
+            </property>
+            <property key="selectedTextColor" type="string" defaultValue="" required="false">
+                <caption>Selected Text Color</caption>
+                <description>Color of text when selected (Hexadecimal string ex: #0E0E0E) </description>
+            </property>
+            <property key="disabledColor" type="string" defaultValue="" required="false">
+                <caption>Disabled Color</caption>
+                <description>Color when Disabled (Hexadecimal string ex: #0E0E0E) </description>
+            </property>
         </propertyGroup>
     </properties>
 </widget>
