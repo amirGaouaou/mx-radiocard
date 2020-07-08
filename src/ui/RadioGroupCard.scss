@@ -1,10 +1,16 @@
 
 
 .radio-group-card {
+    .radio-button {
+        box-shadow: 1px 1px 5px black;
+    }
+
+
     &.hide-border {
         .radio-button {
             &:not(.checked) {
                 border: transparent !important;
+                box-shadow: none;
             }
         }
     }
@@ -12,6 +18,7 @@
     &.hide-border-selected {
         .radio-button.checked {
             border: transparent !important;
+            box-shadow: none;
         }
     }
 }

@@ -15,7 +15,9 @@ class RadioGroupCard extends Component {
             iconSize,
             iconMarginTop,
             iconLocation,
+            iconWidth,
             indexSelected,
+            borderWidth,
             defaultColor,
             selectedType,
             selectedTextColor,
@@ -51,6 +53,8 @@ class RadioGroupCard extends Component {
 
         const radioButtonOptions = {
             iconLocation: iconLocation,
+            iconWidth: iconWidth,
+            borderWidth: borderWidth,
             iconMarginTop: iconMarginTop,
             rootColor: defaultColor,
             pointColor: customSelectedColor,

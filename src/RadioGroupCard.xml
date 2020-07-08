@@ -77,7 +77,7 @@
                 <enumerationValues>
                     <enumerationValue key="top">Top</enumerationValue>
                     <enumerationValue key="center">Center</enumerationValue>
-                    <enumerationValue key="Bottom">Bottom</enumerationValue>
+                    <enumerationValue key="bottom">Bottom</enumerationValue>
                 </enumerationValues>
             </property>
         </propertyGroup>
@@ -86,10 +86,11 @@
                 <caption>Root Color</caption>
                 <description>Color when unselected (Hexadecimal string ex: #0E0E0E) </description>
             </property>
-            <property key="borderWidth" type="string" defaultValue="" required="false">
+            <property key="borderWidth" type="integer" defaultValue="1">
                 <caption>Border Width</caption>
-                <description> Width of the border of the box </description>
-            </property>            <property key="hideBorder" type="boolean" defaultValue="false">
+                <description>Border width of the card</description>
+            </property>          
+            <property key="hideBorder" type="boolean" defaultValue="false">
                 <caption>Hide Border</caption>
                 <description></description>
             </property>
