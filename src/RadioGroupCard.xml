@@ -41,7 +41,7 @@
                     <enumerationValue key="hidden">Hidden</enumerationValue>
                 </enumerationValues>
             </property>
-            <property key="indexSelected" type="attribute" onChange="onIndexChange" required="true">
+            <property key="indexSelected" type="attribute" onChange="onIndexChange" required="false">
                 <caption>Selected Item</caption>
                 <description>Index of the selected item </description>
                 <attributeTypes>
@@ -82,7 +82,7 @@
             </property>
         </propertyGroup>
         <propertyGroup caption="Style">
-            <property key="defaultColor" type="string" defaultValue="#0E0E0E" required="false">
+            <property key="defaultColor" type="string" defaultValue="#555555" required="false">
                 <caption>Root Color</caption>
                 <description>Color when unselected (Hexadecimal string ex: #0E0E0E) </description>
             </property>
@@ -107,7 +107,7 @@
                     <enumerationValue key="both">Both</enumerationValue>
                 </enumerationValues>
             </property>
-            <property key="customSelectedColor" type="string" defaultValue="" required="false">
+            <property key="customSelectedColor" type="string" defaultValue="#0595DB" required="false">
                 <caption>Selected Color</caption>
                 <description>Color when selected (Hexadecimal string ex: #0E0E0E) </description>
             </property>
@@ -115,7 +115,7 @@
                 <caption>Selected Text Color</caption>
                 <description>Color of text when selected (Hexadecimal string ex: #0E0E0E) </description>
             </property>
-            <property key="disabledColor" type="string" defaultValue="" required="false">
+            <property key="disabledColor" type="string" defaultValue="#D7D7D7" required="false">
                 <caption>Disabled Color</caption>
                 <description>Color when Disabled (Hexadecimal string ex: #0E0E0E) </description>
             </property>
