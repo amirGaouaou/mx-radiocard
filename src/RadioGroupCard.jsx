@@ -56,8 +56,8 @@ class RadioGroupCard extends Component {
             iconWidth: iconWidth,
             borderWidth: borderWidth,
             iconMarginTop: iconMarginTop,
-            rootColor: defaultColor,
-            pointColor: customSelectedColor,
+            rootColor: defaultColor || "#888888",
+            pointColor: customSelectedColor || "#0595DB",
             disabledColor: disabledColor,
             selectedColorType: selectedType,
             iconSize: iconCalSize,
@@ -67,7 +67,7 @@ class RadioGroupCard extends Component {
 
         return (
             <RadioGroup
-                value={indexSelected.value}
+                value={indexSelected ? indexSelected.value : ""}
                 className={resultClass}
                 onChange={this.changeAttribute.bind(this)}
                 horizontal={horizontal}
@@ -96,10 +96,12 @@ class RadioGroupCard extends Component {
     changeAttribute(value) {
         const { indexSelected } = this.props;
         // Special type for index 0 it the react component returns a ""
-        if (value === "") {
-            indexSelected.setValue(new Big(0));
-        } else {
-            indexSelected.setValue(new Big(value));
+        if (indexSelected) {
+            if (value === "") {
+                indexSelected.setValue(new Big(0));
+            } else {
+                indexSelected.setValue(new Big(value));
+            }
         }
     }
 }
